@@ -12,27 +12,86 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1 id="title">Dude's Survey</h1>
-        <p id="description">This Survey is about how Dude art thou</p>
-        <form id="survey-form">
-            <ul>
-                <li>
-                    <label  id="name-label" for="name">I am:</label>
-                    <input id="name" type="text" required placeholder="your name">
-                </li>
+        <h1 id="title">User Survey</h1>
+        <p id="description">Your User Input Is Appreciated</p>
+        <div class="label_listed_entry_forms">
+            <form id="survey-form">
+                <ul>
+                    <li>
+                        <label  id="name-label" for="name">I am:</label>
+                        <input id="name" type="text" required placeholder="your name">
+                    </li>
+                    <br>
+                    <li>
+                        <label id="email-label">My Email is:</label>
+                        <input id="email" type="email" required placeholder="your email">
+                    </li>
+                    <br>
+                    <li>
+                        <label id="number-label">Please Rate Your Experience Between 1 to 10</label>
+                        <input id="number" type="number" required placeholder="1-10" min="0" max="10">
+                    </li>
+                </ul>
                 <br>
-                <li>
-                    <label id="email-label">My Email is:</label>
-                    <input id="email" type="email" required placeholder="your email">
-                </li>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="currentPos">Please Help Us Make This Site Better</label>
+                    </div>
+                    <div class="rightTab">
+                        <select id="dropdown" name="currentPos" class="dropdown">
+                        <option disabled value>Select an option</option>
+                        <option  value="op1">Option1</option>
+                        <option value="op2">Option2</option>
+                        <option value="op3">Option3</option>
+                        <option value="op4">Option4</option>
+                        <option value="other">Other</option>
+                    </select>
+                    </div>
+                </div>
                 <br>
-                <li>
-                    <label "number-label">My age is:</label>
-                    <input id="number" type="number" required placeholder="your age" min="1" max="108">
-                </li>
-            </ul>
-            
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="userRating">* How likely is that you would recommend SiteNmae to a friend?</label>
+                    </div>
+                    <div class="rightTab">
+                        <ul style="list-style: none;">
+                        <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+                        <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+                        <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="preferences">Things that should be improved in the future<br>(Check all that apply): </label>
+                    </div>
+                    <div class="rightTab">
+                        <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Site Responsiveness</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Site Nevigation</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Layouts</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Color</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Buttons</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Search</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Links</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">Other</label></li>
+                    </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="comments">Any Comments or Suggestions?</label>
+                    </div>
+                    <div class="rightTab">
+                        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..." rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit">Submit</button>
             </form>
+        </div>
+        
 
     </body>
 </html>
